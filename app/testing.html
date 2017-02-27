@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>检测浏览器</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/header.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="container containerfirst mainContainer">
+			<div class="ik-logo"><a href="/userCenter"><img src="http://static2.kaolawu.com/static/common/img/logo.png"></a></div>
+			<ul class="nav nav__menu">
+				<li class="page-item usercenter" data-img="none">
+					<a href="/userCenter">个人中心</a>
+				</li>
+				<li class="page-item toefl current" data-img="http://static2.kaolawu.com/static/studymain/img/toefl.jpg"><a href="/toefl">TOEFL</a></li>
+				<li class="page-item gre" data-img="http://static2.kaolawu.com/static/studymain/img/gre.jpg"><a href="/gre">GRE</a></li>
+				<li class="page-item gmat" data-img="http://static2.kaolawu.com/static/studymain/img/gmat.jpg"><a href="/gmat">GMAT</a></li>
+				<li class="page-item logbook" data-img="none"><a href="/logBook">记录本</a></li>
+				
+				<input type="hidden" id="stuCode" value="VBJ100086">
+				<li class="page-item classroom nav__menu-item">
+					<a href="javascript:void(0)">
+						<span>课堂</span>
+						<i class="icon-sort-down keDown"></i> 
+					</a>
+				</li>
+					
+				<li class="page-item active"></li>
+			</ul>
+			
+			<div class="float-right">
+				<div class="welcome">
+					<a class="welcome" href="http://passport.kaolawu.com/user/detail">张三</a>
+					
+				</div>
+
+				<a class="exit" href="http://passport.kaolawu.com/logout?gotoURL=http://www.kaolawu.com/logout">退出</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

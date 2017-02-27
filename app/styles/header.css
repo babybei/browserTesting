@@ -1,0 +1,139 @@
+* {
+    box-sizing: content-box;
+    font-family: "microsoft yahei", 黑体, Arial;
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+	position: relative;
+	border-bottom: 1px solid #e8e7e4;
+	background: #04b69b;
+	color: #fff
+}
+
+.header .nav .page-item.active, .header .nav .page-item:hover {
+	background: #02a78a
+}
+
+.header .nav .page-item a:active, .header .nav .page-item a:focus,
+	.header .nav .page-item a:hover, .header .nav .page-item a:visited {
+	color: #fff;
+	background-color: #02a78a;
+	outline: none;
+}
+
+.header .ik-logo {
+	margin-left: 15px
+}
+
+.header .nav {
+	float: left;
+	font-size: 0
+}
+
+.header .nav .page-item {
+	display: inline-block;
+	font-family: "microsoft yahei", "é»‘ä½“", Arial, sans-serif;
+	font-size: 18px;
+	color: #fff;
+	padding: 0 15px;
+	line-height: 68px
+}
+
+/* .header .page-item:hover a {
+	background: #02a78a;
+	color: #fff
+} */
+
+.header .nav .page-item a {
+	padding: 0;
+	color: #fff
+}
+
+.header .nav .page-item a:hover {
+	opacity: 1;
+	outline: none;
+}
+
+.header .nav .select-mark {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	height: 4px;
+	background-color: #02a7cb;
+	-webkit-transition: left 500ms, width 100ms;
+	-moz-transition: left 500ms, width 100ms;
+	-ms-transition: left 500ms, width 100ms;
+	-o-transition: left 500ms, width 100ms;
+	transition: left 500ms, width 100ms
+}
+
+.header .exit, .header .welcome {
+	display: inline-block;
+    margin-top: 4px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.header .exit {
+	margin-left: 10px;
+	text-align: center;
+	color: #fff
+}
+
+.header .mainContainer {
+	width:100%;
+	max-width: 1085px
+}
+/*head  æ¶“å¬«åªºå¦—ï¿½ */
+.nav__menu {
+  text-transform: uppercase;
+}
+.nav__menu-item {
+	position: relative;
+	
+}
+
+.nav__submenu{
+	margin-left: -15px;
+	display: none;
+	z-index: 1000;
+	position: absolute;
+	 background-color: #06b69c;
+}	
+.nav__menu-item span,.nav__menu-item .keDown{
+	vertical-align:middle;
+}
+.nav__menu-item .keDown{
+	font-size:10px;
+}
+.nav__submenu li{
+	padding-right:10px;
+	line-height: 35px;
+	height: 35px;
+	margin:0 auto;
+	
+}
+.nav__menu-item:hover .nav__submenu{
+	display: block;
+}
+.nav__submenu-item:hover{
+	height: 35px;
+	 line-height: 35px;
+	  background-color: #07a48d;
+}
+.nav__submenu-item a{
+	
+	 margin-left: 22px;
+}
+.nav__submenu-item a{
+	 background-color: transparent;
+}
+.float-right {
+	float: right;
+	margin-top: 13px
+}
+
+.float-left, .header .ik-logo, .header .nav, .header .xdf-logo {
+	float: left
+}
