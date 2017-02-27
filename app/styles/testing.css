@@ -1,0 +1,8 @@
+.iconTest{background:url(../images/iconTest.png)  no-repeat;}
+.wrong{height:17px;width:17px;background-position:0 0;}
+.right{height:17px;width:25px;background-position:-31px 0;}
+.refresh{height:25px;width:28px;background-position:-68px 0;}
+.chrome{height:40px;width:40px;background-position:-110px 0;}
+.microphone{height:40px;width:40px;background-position:-165px 0;}
+.mac{height:60px;width:60px;background-position:-216px 0;}
+.window{height:60px;width:60px;background-position:-290px 0;}
