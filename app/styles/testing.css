@@ -3,7 +3,14 @@
 }
 /*------------图标--------------*/
 .iconTest{background:url(../images/iconTest.png)  no-repeat;}
-.wrong{height:17px;width:17px;background-position:0 0; display: inline-block; margin-left: 10px;}
+.wrong{    
+	height: 20px;
+    width: 17px;
+    background-position: 0 0;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
 .right{height:17px;width:25px;background-position:-31px 0;}
 .refresh{height:25px;width:28px;background-position:-68px 0;}
 .chrome{height:40px;width:40px;background-position:-110px 0;}
