@@ -12,7 +12,6 @@
     vertical-align: middle;
 }
 .right{
-<<<<<<< HEAD
     height: 20px;
     width: 25px;
     background-position: -31px 0;
@@ -37,16 +36,6 @@
         -webkit-transform: rotateZ(360deg);
         }
 }
-=======
-	height:17px;
-	width:25px;
-	background-position:-31px 0;
-	display: inline-block;
-    margin-left: 10px;
-    vertical-align: middle;
-}
-.refresh{height:25px;width:28px;background-position:-68px 0;}
->>>>>>> 124b2cd77206eeeb57cfd7edf8111914980af860
 .chrome{height:40px;width:40px;background-position:-110px 0;}
 .microphone{height:40px;width:40px;background-position:-165px 0;}
 .mac{
@@ -111,7 +100,7 @@ ul.platform:after{
 .btn-down:hover{
 	color: #fff;
 	background-color: #11b298;
-=======
+}
 .clearfix:after {
 	display: block;
 	content: "";
