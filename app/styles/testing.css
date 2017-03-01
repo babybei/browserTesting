@@ -1,5 +1,5 @@
 .container{
-	width: 720px;
+	width: 750px;
 }
 /*------------图标--------------*/
 .iconTest{background:url(../images/iconTest.png)  no-repeat;}
@@ -12,6 +12,7 @@
     vertical-align: middle;
 }
 .right{
+<<<<<<< HEAD
     height: 20px;
     width: 25px;
     background-position: -31px 0;
@@ -36,6 +37,16 @@
         -webkit-transform: rotateZ(360deg);
         }
 }
+=======
+	height:17px;
+	width:25px;
+	background-position:-31px 0;
+	display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.refresh{height:25px;width:28px;background-position:-68px 0;}
+>>>>>>> 124b2cd77206eeeb57cfd7edf8111914980af860
 .chrome{height:40px;width:40px;background-position:-110px 0;}
 .microphone{height:40px;width:40px;background-position:-165px 0;}
 .mac{
@@ -59,6 +70,7 @@
 	margin-bottom: 85px;
 }
 .result{
+	margin-bottom: 25px;
 	list-style: none;
 	color: #333;
 }
@@ -70,6 +82,7 @@
     padding: 0 18px;
     font-size: 18px;
 }
+<<<<<<< HEAD
 /*------------系统浏览器下载------------*/
 ul.platform{
 	list-style: none;
@@ -98,4 +111,126 @@ ul.platform:after{
 .btn-down:hover{
 	color: #fff;
 	background-color: #11b298;
+=======
+.clearfix:after {
+	display: block;
+	content: "";
+	height: 0;
+	clear: both;
+}
+/*testing2所用样式*/
+.rr-right {
+	padding: 0 18px;
+	width: 644px;
+	line-height: 40px;
+    font-size: 18px;
+}
+.start {
+	display: inline-block;
+	margin: 0 16px;
+	width: 78px;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+    font-size: 14px;
+    border: 1px solid #16a18c;
+    border-radius: 4px;
+	background-color: #24b79d;
+	text-align: center;
+   
+}
+.rrr-right {
+	padding: 0 56px;
+	width: 644px;
+	line-height: 32px;
+	font-size:16px;
+}
+.speakContent {
+	margin-left: 56px;
+	padding: 10px 6px;
+    background-color: #f6f6f8;
+    text-align: center;
+}
+.mirophone {
+    display: inline-block;
+    width: 420px;
+    vertical-align: middle;
+}
+.mirophone .mirophoneEnTips {
+    color: #000;
+    font-size: 30px;
+}
+.mirophone li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.mirophone .mirophoneOption {
+    width: 145px;
+    height: 28px;
+    margin: 12px 0 0 5px;
+}
+.mirophone li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.mirophone .mirophoneChTips {
+    position: relative;
+    width: 425px;
+    height: 28px;
+    color: red;
+    border: 1px solid #c3c0b9;
+}
+.lightBlue {
+    opacity: .2;
+}
+.record-volume-bar {
+    height: 100%;
+    width: 0;
+    background: #026aae;
+}
+.mirophone .mirophoneChTips{
+	color: red;
+}
+.mirophone .mirophoneChTips .microphoneTip {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.controlButton {
+    display: inline-block;
+    width: 250px;
+    vertical-align: middle;
+}
+.controlButton .butBig {
+    width: 138px;
+    height: 30px;
+}
+.controlButton li {
+    display: inline-block;
+    margin: 0 0 8px 13px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+    border: 1px solid #000;
+    background: #cfcbc6;
+    cursor: pointer;
+}
+.controlButton .butInvalid {
+    color: #aba7a2;
+    background: #edecea;
+    border: 1px solid #c3c0b9;
+}
+.controlButton .butSmall {
+    width: 76px;
+    height: 30px;
+}
+.controlButton .butBig {
+    width: 138px;
+    height: 30px;
+}
+.controlButton .butSmall {
+    width: 76px;
+    height: 30px;
+>>>>>>> 124b2cd77206eeeb57cfd7edf8111914980af860
 }

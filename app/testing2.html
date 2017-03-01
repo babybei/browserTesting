@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>检测浏览器</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/testing.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <script src="../bower_components/requirejs/require.js"></script>
+    <script src="./scripts/require_conf.js"></script>
+    <script src="./scripts/dialog.js"></script>
+    <script src="./scripts/speaking_exercise.js"></script>
+    
+</head>
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="container containerfirst mainContainer">
+			<div class="ik-logo"><a href="/userCenter"><img src="http://static2.kaolawu.com/static/common/img/logo.png"></a></div>
+			<ul class="nav nav__menu">
+				<li class="page-item usercenter" data-img="none">
+					<a href="/userCenter">个人中心</a>
+				</li>
+				<li class="page-item toefl current" data-img="http://static2.kaolawu.com/static/studymain/img/toefl.jpg"><a href="/toefl">TOEFL</a></li>
+				<li class="page-item gre" data-img="http://static2.kaolawu.com/static/studymain/img/gre.jpg"><a href="/gre">GRE</a></li>
+				<li class="page-item gmat" data-img="http://static2.kaolawu.com/static/studymain/img/gmat.jpg"><a href="/gmat">GMAT</a></li>
+				<li class="page-item logbook" data-img="none"><a href="/logBook">记录本</a></li>
+				
+				<input type="hidden" id="stuCode" value="VBJ100086">
+				<li class="page-item classroom nav__menu-item">
+					<a href="javascript:void(0)">
+						<span>课堂</span>
+						<i class="icon-sort-down keDown"></i> 
+					</a>
+				</li>
+					
+				<li class="page-item active"></li>
+			</ul>
+			
+			<div class="float-right">
+				<div class="welcome">
+					<a class="welcome" href="http://passport.kaolawu.com/user/detail">张三</a>
+					
+				</div>
+
+				<a class="exit" href="http://passport.kaolawu.com/logout?gotoURL=http://www.kaolawu.com/logout">退出</a>
+			</div>
+		</div>
+	</div>
+	<!-- 内容 -->
+	<div class="container">
+		<h1 class="title24">正在对模考环境及设备进行检测......</h1>
+		<ul class="result clearfix">
+			<li class="iconTest chrome"></li>
+			<li class="r-right">
+				<div>浏览器检测<div class="iconTest right"></div></div>
+				<!-- <p>您的浏览器不符合模考要求，请按提示进行操作：</p>
+				<p>1.卸载此浏览器</p>
+				<p>2.下载并安装指定版本谷歌浏览器</p> -->
+			</li>
+		</ul>
+		<ul class="result clearfix micro">
+			<li class="iconTest microphone"></li>
+			<li class="rr-right">
+				<div>麦克风检测
+					<span style="font-size:16px;">（点击<img src="./images/recording.gif" style="margin: 0 10px;">时，请仔细检查页面弹框，点击
+					<span style="font-weight: 900">允许</span>使用您的摄像机和麦克风）
+					</span>
+				</div>
+			</li>
+			<li>
+			<input id="recordswf" type="hidden" data-url="./FlashWavRecord/recorder.swf">
+				<span id="save_button"> 
+					<span id="flashcontent">
+						<p>Your browser must have JavaScript enabled and the Adobe Flash
+						Player installed.</p>
+					</span>
+				</span>
+				<div class="content content-speak-test">
+					<div class="speakContent">
+						<div class="mirophone">
+							<ul>
+								<li class="mirophoneEnTips">Select Microphone</li>
+								<li class="mirophoneOption">
+									<form action="">
+										<select style="border-radius: 4px;">
+											<option>FlashWavRecorder</option>
+										</select>
+									</form>
+								</li>
+								<li class="mirophoneChTips">
+									<div class="record-volume-bar lightBlue"></div>
+									<div class="microphoneTip">您可以测试麦克风了！</div>
+								</li>
+							</ul>
+						</div>
+						<div class="controlButton">
+							<ul>
+								<li id="recording" class="butBig butInvalid">Recording</li>
+								<li id="stop" class="butSmall butInvalid">Stop</li>
+								<li id="play" class="butBig butInvalid">Play</li>
+								<li id="retry" class="butSmall butInvalid">Retry</li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</li>
+			<li class="rrr-right"> 》录音失败
+				<span style="font-size:14px;">
+				（听不到声音或者杂音较大），
+				</span>
+				 请先检查或者更换耳麦重试。仍然不行，请联系监考或顾问老师
+			</li>
+			<li class="rrr-right">
+				》录音正常<span class="start">进入考试 ></span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
