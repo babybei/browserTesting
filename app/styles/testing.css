@@ -11,19 +11,52 @@
     margin-left: 10px;
     vertical-align: middle;
 }
-.right{height:17px;width:25px;background-position:-31px 0;}
-.refresh{height:25px;width:28px;background-position:-68px 0;}
+.right{
+    height: 20px;
+    width: 25px;
+    background-position: -31px 0;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.refresh{
+	height:25px;
+	width:28px;
+	background-position:-68px 0;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: text-top;
+	-webkit-animation: refreshRotate 1s linear infinite; /*infinite无限循环的效果*/
+}
+@-webkit-keyframes refreshRotate{
+	0% {
+        -webkit-transform: rotateZ(0deg);
+        }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        }
+}
 .chrome{height:40px;width:40px;background-position:-110px 0;}
 .microphone{height:40px;width:40px;background-position:-165px 0;}
-.mac{height:60px;width:60px;background-position:-216px 0;}
-.window{height:60px;width:60px;background-position:-290px 0;}
+.mac{
+	height:60px;
+	width:60px;
+	background-position:-216px 0;
+	margin: 0 auto;
+}
+.window{
+	height:60px;
+	width:60px;
+	background-position:-290px 0;
+	margin: 0 auto;
+}
 
 .title24{
 	text-align: center;
 	font-size: 24px;
 	color: #1eb59b;
 	margin-top: 100px;
-	margin-bottom: 90px;
+	margin-bottom: 85px;
 }
 .result{
 	list-style: none;
@@ -36,4 +69,33 @@
     line-height: 40px;
     padding: 0 18px;
     font-size: 18px;
+}
+/*------------系统浏览器下载------------*/
+ul.platform{
+	list-style: none;
+	margin-top: 20px;
+	text-align: center;
+}
+ul.platform li{
+	float: left;
+	margin-right: 80px;
+}
+ul.platform:after{
+	content: "";
+	display: block; 
+	clear: both;
+}
+/*------------下载按钮------------*/
+.btn-down {
+    color: #fff;
+    background-color: #10b89d;
+    border-color: #00a28a;
+    border-radius: 10px;
+    padding: 5.5px 19px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.btn-down:hover{
+	color: #fff;
+	background-color: #11b298;
 }
