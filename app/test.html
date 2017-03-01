@@ -1,0 +1,37 @@
+<!-- HTML5基本文档结构 //-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS3自动旋转效果</title>
+        <style>
+          @-webkit-keyframes btnRotate {
+            0% {
+                -webkit-transform: rotateZ(0deg);
+                }
+            100% {
+                -webkit-transform: rotateZ(360deg);
+                }
+            }
+            div {
+                -webkit-animation: btnRotate 1.5s linear infinite;
+            }
+            a{ display: inline-block; width: 10px;height:5px; background: red;line-height: 0;font-size:0;vertical-align: middle;-webkit-transform: rotate(45deg);}
+      a:after{content:'/';display:block;width: 20px;height:5px; background: red;-webkit-transform: rotate(-90deg) translateY(-50%) translateX(50%);}
+        </style>
+  </head>
+  <body>
+      <div style="background: url(http://p9.qhimg.com/t01b7891921b2a1b6d7.png); width: 56px; height:56px;"></div>
+      <a href=""></a>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <line x1="0" y1="5" x2="15" y2="20" style="stroke:rgb(29,181,156);stroke-width:3" />
+  <line x1="15" y1="20" x2="40" y2="0" style="stroke:rgb(29,181,156);stroke-width:3" />
+</svg>
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".swiper-container").css("height",$(window).height());
+      });
+    </script>
+  </body>
+</html>

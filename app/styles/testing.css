@@ -71,7 +71,6 @@
     padding: 0 18px;
     font-size: 18px;
 }
-<<<<<<< HEAD
 /*------------系统浏览器下载------------*/
 ul.platform{
 	list-style: none;
@@ -221,5 +220,4 @@ ul.platform:after{
 .controlButton .butSmall {
     width: 76px;
     height: 30px;
->>>>>>> 124b2cd77206eeeb57cfd7edf8111914980af860
 }

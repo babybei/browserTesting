@@ -14,7 +14,7 @@ requirejs(
                 var appWidth = 1;
                 var appHeight = 1;
                 var flashvars = {
-                    'upload_image': '/static/toefl/img/upload.png'
+                    'upload_image': '../images/upload.png'
                 };
                 var params = {};
                 var attributes = {
