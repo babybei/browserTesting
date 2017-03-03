@@ -23,6 +23,9 @@
 	<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="../bower_components/modernizr/modernizr.js"></script>
 	<!-- endbuild -->
+    <script src="../bower_components/requirejs/require.js"></script>
+    <script src="./video/require_conf.js"></script>
+    <script src="./video/speaking_exercise.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -37,7 +40,7 @@
 				<li class="page-item gre" data-img="http://static2.kaolawu.com/static/studymain/img/gre.jpg"><a href="/gre">GRE</a></li>
 				<li class="page-item gmat" data-img="http://static2.kaolawu.com/static/studymain/img/gmat.jpg"><a href="/gmat">GMAT</a></li>
 				<li class="page-item logbook" data-img="none"><a href="/logBook">记录本</a></li>
-				
+				 
 				<input type="hidden" id="stuCode" value="VBJ100086">
 				<li class="page-item classroom nav__menu-item">
 					<a href="javascript:void(0)">
@@ -62,7 +65,7 @@
 	<!-- 内容 -->
 	<div class="container">
 		<h1 class="title24">正在对模考环境及设备进行检测......</h1>
-		<ul class="result">
+		<ul class="result clearfix">
 			<li class="iconTest chrome"></li>
 			<li class="r-right">
 				<div style="margin-bottom: 10px;">浏览器检测<div id="browserR" class="iconTest refresh"></div></div>
@@ -71,14 +74,70 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="result"></ul>
+		<ul class="result clearfix micro">
+			<li class="iconTest microphone"></li>
+			<li class="rr-right">
+				<div>麦克风检测
+					<span style="font-size:16px;">(点击<img src="./images/recording.gif" style="margin: 0 10px;">时，请仔细检查页面弹框，点击
+					<span style="font-weight: 900">允许</span>使用您的摄像机和麦克风)
+					</span>
+				</div>
+			</li>
+			<li style="margin-bottom: 15px;">
+			<input id="recordswf" type="hidden" data-url="./FlashWavRecord/recorder.swf">
+				<span id="save_button"> 
+					<span id="flashcontent">
+						<p>Your browser must have JavaScript enabled and the Adobe Flash
+						Player installed.</p>
+					</span>
+				</span>
+				<div class="content content-speak-test">
+					<div class="speakContent">
+						<div class="mirophone">
+							<ul>
+								<li class="mirophoneEnTips">Select Microphone</li>
+								<li class="mirophoneOption">
+									<form action="">
+										<select style="border-radius: 4px;">
+											<option>FlashWavRecorder</option>
+										</select>
+									</form>
+								</li>
+								<li class="mirophoneChTips">
+									<div class="record-volume-bar lightBlue"></div>
+									<div class="microphoneTip">您可以测试麦克风了！</div>
+								</li>
+							</ul>
+						</div>
+						<div class="controlButton">
+							<ul>
+								<li id="recording" class="butBig butInvalid">Recording</li>
+								<li id="stop" class="butSmall butInvalid">Stop</li>
+								<li id="play" style="margin-top: 6px;" class="butBig butInvalid">Play</li>
+								<li id="retry" style="margin-top: 6px;" class="butSmall butInvalid">Retry</li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</li>
+			<li class="rrr-right">》录音失败
+				<span style="font-size:14px;">
+				(听不到声音或者杂音较大)，
+				</span>
+				 请先检查或者更换耳麦重试。仍然不行，请联系监考或顾问老师
+			</li>
+			<li class="rrr-right">
+				》录音正常<a class="start" href="/exam/doExam?classCode=${classCode}&studentCode=${studentCode}&classExamId=${classExamId}" target="_self">进入考试 ></a>
+			</li>
+		</ul>
 	</div>
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
 	<!-- endbower -->
 	<!-- endbuild -->
 	<script type="text/javascript">
+	requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBar) {
 		$(function(){
 			var userAgent =navigator.userAgent;
 			var b_version=navigator.appVersion;
@@ -92,7 +151,7 @@
 				if(chrome_version<=53){
 					browserSure=true;
 				}else{  //浏览器不合格版本地与53
-					resultHtml='<p>您的浏览器不符合模考要求，请按提示进行操作：</p><p>1.卸载此浏览器</p><p>2.下载并安装指定版本谷歌浏览器</p>';
+					resultHtml='<p>您的浏览器不符合模考要求，请按提示进行操作：</p><p>1.卸载此浏览器<a class="ab-look" target="_blank" href="http://jingyan.baidu.com/article/00a07f3882097982d028dc18.html">点击查看卸载方式</a></p><p>2.下载并安装指定版本谷歌浏览器</p>';
 				}
 			}else{  //其他浏览器
 				resultHtml='<p>请使用考拉屋模考专用谷歌浏览器，下载地址如下：</p>';
@@ -101,16 +160,16 @@
 			var bit= GetOSInfo();
 			switch(bit){
 				case "WOW64":
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows64位版</p><div class="btn btn-down">立即下载</div></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows64位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1bFd1eQ" target="_blank">立即下载</a></li></ul>';
 				break;
 				case "WOW32":
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><div class="btn btn-down">立即下载</div></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eR4fUPc" target="_blank">立即下载</a></li></ul>';
 				break;
 				case "Mac":
-				resultHtml+='<ul class="platform"><li><div class="iconTest mac"></div><p>MAC版</p><div class="btn btn-down">立即下载</div></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest mac"></div><p>MAC版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eSl1F02" target="_blank">立即下载</a></li></ul>';
 				break;
 				default:
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><div class="btn btn-down">立即下载</div></li><li><div class="iconTest window"></div><p>Windows64位版</p><div class="btn btn-down">立即下载</div></li><li><div class="iconTest mac"></div><p>MAC版</p><div class="btn btn-down">立即下载</div></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eR4fUPc" target="_blank">立即下载</a></li><li><div class="iconTest window"></div><p>Windows64位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1bFd1eQ" target="_blank">立即下载</a></li><li><div class="iconTest mac"></div><p>MAC版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eSl1F02" target="_blank">立即下载</a></li></ul>';
 				break;
 			}
 			//停止动画
@@ -119,6 +178,7 @@
 				$("#browserR").removeClass('refresh');
 				if(browserSure){
 					$("#browserR").addClass('right');
+					$(".micro").css("display","block");
 				}else{
 					$("#browserR").addClass('wrong');
 					$(".result01").html(resultHtml);
@@ -151,6 +211,7 @@
 				return "Unknow"; 
 			} 
 		}
+	});
 	</script>
 </body>
 </html>
