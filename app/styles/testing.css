@@ -63,7 +63,7 @@
 	margin-bottom: 85px;
 }
 .result{
-	margin-bottom: 14px;
+	margin-bottom: 24px;
 	list-style: none;
 	color: #333;
 }
@@ -162,8 +162,9 @@ a.start:hover, a.start:focus{
 }
 .speakContent {
 	margin-left: 56px;
-	padding: 3px 6px;
-    background-color: #f6f6f8;
+    width: 700px;
+    height: 81px;
+    background-color: #f6f6f7;
     text-align: center;
 }
 .mirophone {
@@ -184,16 +185,16 @@ a.start:hover, a.start:focus{
 .mirophone .mirophoneOption {
     width: 145px;
     height: 28px;
-    margin: 12px 0 0 5px;
+    margin: 6px 0 0 5px;
 }
 .mirophone li {
     display: inline-block;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 }
 .mirophone .mirophoneChTips {
     position: relative;
     width: 425px;
-    height: 28px;
+    height: 26px;
     color: red;
     border: 1px solid #c3c0b9;
 }
@@ -206,13 +207,13 @@ a.start:hover, a.start:focus{
     background: #026aae;
 }
 .mirophone .mirophoneChTips{
-	color: red;
+	color: #E94A3C;
 }
 .mirophone .mirophoneChTips .microphoneTip {
     position: absolute;
     left: 3px;
     top: 1px;
-    font-size: 18px;
+    font-size: 17px;
 }
 .controlButton {
     display: inline-block;
@@ -220,24 +221,26 @@ a.start:hover, a.start:focus{
     vertical-align: middle;
 }
 .controlButton .butBig {
-    width: 138px;
+    width: 132px;
+    height: 26px;
 }
 .controlButton li {
     display: inline-block;
-    margin: 0 0 8px 13px;
-    font-size: 20px;
+    margin: 0 0 7px 20px;
+    font-size: 17px;
     font-weight: 500;
     text-align: center;
     color: #000;
-    border: 1px solid #000;
-    background: #cfcbc6;
+    border: 1px solid #5b5b5b;
+    background: #cfcbc7;
     cursor: pointer;
 }
 .controlButton .butInvalid {
-    color: #aba7a2;
+    color: #aeaaa6;
     background: #edecea;
-    border: 1px solid #c3c0b9;
+    border: 1px solid #afafaf;
 }
 .controlButton .butSmall {
-    width: 76px;
+    width: 69px;
+    height: 26px;
 }

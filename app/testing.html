@@ -68,7 +68,7 @@
 		<ul class="result clearfix">
 			<li class="iconTest chrome"></li>
 			<li class="r-right">
-				<div style="margin-bottom: 10px;">浏览器检测<div id="browserR" class="iconTest refresh"></div></div>
+				<div >浏览器检测<div id="browserR" class="iconTest refresh"></div></div>
 				<div class="result01" style="display: none;">
 
 				</div>
@@ -76,29 +76,25 @@
 		</ul>
 		<ul class="result clearfix micro">
 			<li class="iconTest microphone"></li>
-			<li class="rr-right">
+			<li class="rr-right"style="margin-bottom: 22px;" >
 				<div>麦克风检测
-					<span style="font-size:16px;">(点击<img src="./images/recording.gif" style="margin: 0 10px;">时，请仔细检查页面弹框，点击
+					<span style="font-size:16px;height:35px; display:inline-block;">(点击<img src="./images/recording.gif" style="margin: 0 10px;">时，请仔细检查页面弹框，点击
 					<span style="font-weight: 900">允许</span>使用您的摄像机和麦克风)
 					</span>
 				</div>
 			</li>
-			<li style="margin-bottom: 15px;">
+			<li>
 			<input id="recordswf" type="hidden" data-url="./FlashWavRecord/recorder.swf">
-				<span id="save_button"> 
-					<span id="flashcontent">
-						<p>Your browser must have JavaScript enabled and the Adobe Flash
-						Player installed.</p>
-					</span>
-				</span>
 				<div class="content content-speak-test">
 					<div class="speakContent">
 						<div class="mirophone">
 							<ul>
-								<li class="mirophoneEnTips">Select Microphone</li>
+								<li class="mirophoneEnTips">
+									<img src="./images/Select-Microphone.png" alt="">
+								</li>
 								<li class="mirophoneOption">
 									<form action="">
-										<select style="border-radius: 4px;">
+										<select style="border-radius: 4px; padding-right: 28px; font-weight: 600; font-size: 17px;">
 											<option>FlashWavRecorder</option>
 										</select>
 									</form>
@@ -111,23 +107,31 @@
 						</div>
 						<div class="controlButton">
 							<ul>
-								<li id="recording" class="butBig butInvalid">Recording</li>
-								<li id="stop" class="butSmall butInvalid">Stop</li>
-								<li id="play" style="margin-top: 6px;" class="butBig butInvalid">Play</li>
-								<li id="retry" style="margin-top: 6px;" class="butSmall butInvalid">Retry</li>
+								<li id="recording" class="butBig butInvalid" style="margin-top: 9px;">Recording</li>
+								<li id="stop" class="butSmall butInvalid" style="margin-top: 9px;">Stop</li>
+								<li id="play"  class="butBig butInvalid">Play</li>
+								<li id="retry"  class="butSmall butInvalid">Retry</li>
 							</ul>
 						</div>
 					</div>
 				</div>	
+				<span id="save_button"> 
+					<span id="flashcontent">
+						<p>Your browser must have JavaScript enabled and the Adobe Flash
+						Player installed.</p>
+					</span>
+				</span>
 			</li>
-			<li class="rrr-right">》录音失败
+			<li class="rrr-right">
+				<img src="./images/shape.png" style="margin: 0 6px;">录音失败
 				<span style="font-size:14px;">
 				(听不到声音或者杂音较大)，
 				</span>
 				 请先检查或者更换耳麦重试。仍然不行，请联系监考或顾问老师
 			</li>
 			<li class="rrr-right">
-				》录音正常<a class="start" href="/exam/doExam?classCode=${classCode}&studentCode=${studentCode}&classExamId=${classExamId}" target="_self">进入考试 ></a>
+				<img src="./images/shape.png" style="margin: 0 6px;">录音正常
+				<a class="start" href="/exam/doExam?classCode=${classCode}&studentCode=${studentCode}&classExamId=${classExamId}" target="_self">进入考试 ></a>
 			</li>
 		</ul>
 	</div>
