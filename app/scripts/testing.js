@@ -1,12 +1,32 @@
 requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBar) {
 		$(function(){
-			var userAgent =navigator.userAgent;
+			var userAgent =navigator.userAgent; //取得浏览器的userAgent字符串
 			var b_version=navigator.appVersion;
 			var resultHtml='';
-			var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器  
-	      	var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器 
+			// var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器  
+	  		// var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器 
 	      	var browserSure=false;
-	      	if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1) {
+		    
+		    var browserName="";
+		    var isOpera=userAgent.indexOf("Opera")>-1;
+		    if (isOpera) {
+		        browserName= "Opera"
+		    }; //判断是否Opera浏览器
+		    if (userAgent.indexOf("Firefox") > -1) {
+		        browserName= "FF";
+		    } //判断是否Firefox浏览器
+		    if (userAgent.indexOf("Chrome") > -1){
+			  browserName= "Chrome";
+			 }
+		    if (userAgent.indexOf("Safari") > -1) {
+		        browserName= "Safari";
+		    } //判断是否Safari浏览器
+		    if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+		        browserName= "IE";
+		    }; //判断是否IE浏览器
+
+
+	      	if (browserName=="Chrome") {
 				// alert("浏览器名称："+"Chrome"+"浏览器版本："+ parseFloat(b_version.split('Chrome/')[1]));
 				var chrome_version=parseFloat(b_version.split('Chrome/')[1]);
 				if(chrome_version<=53){
@@ -18,7 +38,7 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 				resultHtml='<p>请使用考拉屋模考专用谷歌浏览器，下载地址如下：</p>';
 			}
 			//系统类型判断
-			var bit= GetOSInfo();
+			var bit= GetOSInfo(browserName);
 			switch(bit){
 				case "WOW64":
 				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows64位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1bFd1eQ" target="_blank">立即下载</a></li></ul>';
@@ -50,7 +70,7 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 		//判断系统类型
 		function GetOSInfo()
 		{ 
-			var _pf=navigator.platform; 
+			var _pf=navigator.platform;
 			var appVer=navigator.userAgent; 
 			if(_pf=="Win32" || _pf == "Windows") 
 			{ 
@@ -63,6 +83,9 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 					return "WOW32";   //32位
 				} 
 			}
+			else if(_pf=="Win64"){
+				return "WOW64";   //64位
+			}
 			else if(_pf.indexOf("Mac")>-1)
 			{ 
 				return "Mac"; 
@@ -72,3 +95,4 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 				return "Unknow"; 
 			} 
 		}
+	});
