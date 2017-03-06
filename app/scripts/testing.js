@@ -74,7 +74,7 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 			var appVer=navigator.userAgent; 
 			if(_pf=="Win32" || _pf == "Windows") 
 			{ 
-				if(appVer.indexOf("WOW64")>-1)
+				if(appVer.toUpperCase().indexOf("WOW64")>-1||appVer.toUpperCase().indexOf("WIN64")>-1)
 				{ 
 					return "WOW64";   //64位
 				}
