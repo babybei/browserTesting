@@ -3,8 +3,8 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 			var userAgent =navigator.userAgent; //取得浏览器的userAgent字符串
 			var b_version=navigator.appVersion;
 			var resultHtml='';
-			// var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器  
-	  		// var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器 
+			var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器  
+	  		var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器 
 	      	var browserSure=false;
 		    
 		    var browserName="";
@@ -12,16 +12,16 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 		    if (isOpera) {
 		        browserName= "Opera"
 		    }; //判断是否Opera浏览器
-		    if (userAgent.indexOf("Firefox") > -1) {
+		    else if (userAgent.indexOf("Firefox") > -1) {
 		        browserName= "FF";
 		    } //判断是否Firefox浏览器
-		    if (userAgent.indexOf("Chrome") > -1){
+		    else if (isChrome){
 			  browserName= "Chrome";
 			 }
-		    if (userAgent.indexOf("Safari") > -1) {
+		    else if (isSafari) {
 		        browserName= "Safari";
 		    } //判断是否Safari浏览器
-		    if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+		    else if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
 		        browserName= "IE";
 		    }; //判断是否IE浏览器
 
