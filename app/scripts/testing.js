@@ -41,16 +41,16 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 			var bit= GetOSInfo(browserName);
 			switch(bit){
 				case "WOW64":
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows64位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1bFd1eQ" target="_blank">立即下载</a></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows64位版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/53.0.2785.116_chrome_installer64.exe" target="_blank" class="btn btn-down">立即下载</a></li></ul>';
 				break;
 				case "WOW32":
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eR4fUPc" target="_blank">立即下载</a></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/53.0.2785.116_chrome_installer.exe" target="_blank" class="btn btn-down">立即下载</a></li></ul>';
 				break;
 				case "Mac":
-				resultHtml+='<ul class="platform"><li><div class="iconTest mac"></div><p>MAC版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eSl1F02" target="_blank">立即下载</a></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest mac"></div><p>MAC版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/googlechrome.dmg" target="_blank" class="btn btn-down">立即下载</a></li></ul>';
 				break;
 				default:
-				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eR4fUPc" target="_blank">立即下载</a></li><li><div class="iconTest window"></div><p>Windows64位版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1bFd1eQ" target="_blank">立即下载</a></li><li><div class="iconTest mac"></div><p>MAC版</p><a class="btn btn-down" href="http://pan.baidu.com/s/1eSl1F02" target="_blank">立即下载</a></li></ul>';
+				resultHtml+='<ul class="platform"><li><div class="iconTest window"></div><p>Windows32位版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/53.0.2785.116_chrome_installer.exe" target="_blank" class="btn btn-down">立即下载</a></li><li><div class="iconTest window"></div><p>Windows64位版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/53.0.2785.116_chrome_installer64.exe" target="_blank" class="btn btn-down">立即下载</a></li><li><div class="iconTest mac"></div><p>MAC版</p><a href="http://ol1st441k.bkt.clouddn.com/static/browser/googlechrome.dmg" target="_blank" class="btn btn-down">立即下载</a></li></ul>';
 				break;
 			}
 			//停止动画
