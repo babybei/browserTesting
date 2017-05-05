@@ -11,7 +11,7 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 		    var isOpera=userAgent.indexOf("Opera")>-1;
 		    if (isOpera) {
 		        browserName= "Opera"
-		    }; //判断是否Opera浏览器
+		    } //判断是否Opera浏览器
 		    else if (userAgent.indexOf("Firefox") > -1) {
 		        browserName= "FF";
 		    } //判断是否Firefox浏览器
@@ -23,7 +23,7 @@ requirejs([ 'jquery', 'audioBar', 'recorder', 'swfobject' ],function ($, audioBa
 		    } //判断是否Safari浏览器
 		    else if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
 		        browserName= "IE";
-		    }; //判断是否IE浏览器
+		    } //判断是否IE浏览器
 
 
 	      	if (browserName=="Chrome") {
